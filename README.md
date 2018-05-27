@@ -31,7 +31,7 @@ platform :ios, '9.0'
 use_frameworks!
 
 target '<Your Target Name>' do
-    pod 'OAuth2'
+    pod 'OAuth2-Swift'
 end
 ```
 
@@ -51,7 +51,7 @@ Check the Example app.
 
 
 
-##License
+## License
 
 MIT License (MIT)
 

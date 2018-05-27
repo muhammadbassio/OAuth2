@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name             = 'OAuth2'
+  s.name             = 'OAuth2-Swift'
   s.version          = '1.0'
   s.summary          = 'A library makes OAuth2 handling in iOS more simple.'
  
