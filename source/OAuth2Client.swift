@@ -235,6 +235,7 @@ open class OAuth2Client {
       let parameters = [
         "client_id": "\(self.configuration.clientId)",
         "client_secret": "\(self.configuration.clientSecret)",
+        "redirect_uri": "\(self.configuration.redirectURL)",
         "refresh_token": "\(tok)",
         "grant_type": "refresh_token"
       ]
