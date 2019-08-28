@@ -136,7 +136,9 @@ open class OAuth2Client {
     
     if #available(iOS 11.0, *) {
       self.safariAuthenticator = SFAuthenticationSession(url: URL(string: urltext.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!)!, callbackURLScheme: self.configuration.redirectURL, completionHandler: { (url, error) in
-        if let url = url {
+        if let error = error {
+          self.clientDidFailLoadingToken(OAuth2Error(localizedTitle: "Authentication failed", localizedDescription: error.localizedDescription))
+        } else if let url = url {
           self.handle(redirectURL: url)
         }
       })
